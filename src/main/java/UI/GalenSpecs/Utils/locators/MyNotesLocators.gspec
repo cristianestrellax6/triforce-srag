@@ -1,0 +1,5 @@
+@objects
+	myNotesDiv			#my-notes-page
+		titleLabel		h2
+		noteList		.list-group
+		addNoteButton	button.btn-primary

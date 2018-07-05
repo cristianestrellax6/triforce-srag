@@ -1,0 +1,4 @@
+@objects
+	welcomePage			#welcome-page
+		text			h1
+		buttonLogin		button.button-login

@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="smokeE2E" parallel="methods">
+  <test name="login" parallel="classes" >
+    <classes>
+      <class name="Smoke.LoginTests"/>
+      <class name="Smoke.FormPageTests"/>
+    </classes>
+  </test>
+  <test name="Layout">
+    <classes>
+      <class name="UI.WelcomePageUITest"/>
+    </classes>
+  </test>
+  <test name="API">
+    <classes>
+      <class name="API.RestAssured"/>
+    </classes>
+  </test>
+</suite>

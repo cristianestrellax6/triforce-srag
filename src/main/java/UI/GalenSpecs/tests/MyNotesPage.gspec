@@ -1,0 +1,31 @@
+@import ../utils/locators/MyNotesLocators.gspec
+@import ../utils/common/UpperPage.gspec
+@import ../utils/common/FooterPage.gspec
+
+
+= My Notes =
+	myNotesDiv:
+		below menu 40 px
+
+	myNotesDiv.titleLabel:
+		text is "My Notes"
+
+	myNotesDiv.noteList:
+		below myNotesDiv.titleLabel 10 px
+	
+	myNotesDiv.addNoteButton:
+
+		@on desktop,tablet
+			below myNotesDiv.noteList 20 px
+		
+		@on mobile
+			below myNotesDiv.noteList 30 px
+
+
+
+
+
+
+
+
+

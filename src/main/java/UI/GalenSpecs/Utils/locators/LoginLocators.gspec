@@ -1,0 +1,7 @@
+@objects
+    loginForm			#login-page
+		titleLabel		h2
+		usernameBox		[name*='login.username']
+		passwordBox		[name*='login.password']
+		loginButton		button.button-login
+		cancelButton	button.button-cancel

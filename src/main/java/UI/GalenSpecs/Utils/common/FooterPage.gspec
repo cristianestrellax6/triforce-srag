@@ -1,0 +1,8 @@
+@objects
+    footer 		.footer-signature
+
+
+= Footer =
+	footer:
+		text is "Copyright (c) 2015"
+		centered horizontally inside viewport

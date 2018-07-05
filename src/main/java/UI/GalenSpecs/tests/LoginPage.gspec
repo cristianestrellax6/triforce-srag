@@ -1,0 +1,56 @@
+@import ../utils/locators/LoginLocators.gspec
+@import ../utils/common/UpperPage.gspec	
+@import ../utils/common/FooterPage.gspec	
+
+= Login Page =
+	loginForm:
+		centered horizontally inside viewport
+		@on desktop,tablet
+			below menu 20 px
+		@on mobile
+			below menu 40 px
+	
+	loginForm.titleLabel:
+		height 33 px
+		above loginForm.usernameBox 10 px
+		text is "Login"
+
+	loginForm.usernameBox:
+		aligned vertically all loginForm.passwordBox
+
+		@on desktop, tablet
+			width 	358 px
+			below loginForm.titleLabel 10 px
+			above loginForm.passwordBox 10 px
+			aligned vertically left loginForm.loginButton
+				
+		@on mobile
+			width 	460 px
+			aligned vertically all loginForm.loginButton
+			aligned vertically all loginForm.cancelButton
+
+		@on desktop,tablet,mobile
+			height 	34 	px
+				
+	loginForm.passwordBox:
+		aligned vertically all loginForm.usernameBox
+
+		@on desktop, tablet
+			width 	358 px
+			below loginForm.usernameBox 10 px
+			aligned vertically left loginForm.loginButton
+		
+		@on mobile
+			width 	460 px
+			aligned vertically all loginForm.loginButton
+			aligned vertically all loginForm.cancelButton
+
+		@on desktop,tablet,mobile
+			height 	34 	px
+		
+	loginForm.loginButton:
+		@on desktop, tablet
+			aligned horizontally all loginForm.cancelButton
+
+		@on mobile
+			aligned vertically all loginForm.cancelButton

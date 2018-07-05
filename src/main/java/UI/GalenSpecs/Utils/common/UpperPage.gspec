@@ -1,0 +1,57 @@
+@objects
+	header			#header .middle-wrapper
+		logo		#header-logo
+		label		h1
+
+    menu 			#menu .middle-wrapper
+		items-*		ul li a
+
+= Header =
+    header:
+        centered horizontally inside viewport
+
+    	@on desktop,tablet,mobile
+        	height 69 px
+
+	header.label:
+		@on desktop
+			text is "Sample Website for Galen Framework"
+		@on tablet,mobile
+			text is "Sample Website"
+
+	header.logo:
+		@on desktop,tablet,mobile
+			width 48 px
+			height 48 px
+
+= Menu =
+	menu:
+		below 	header.label 11 px
+		centered horizontally inside viewport
+		@on desktop,tablet
+			height 	63 px
+
+		@on tablet
+			width 800 px
+
+		@on mobile
+			width 	500 px
+			height 	126 px
+
+		@on desktop
+			width 900 px
+
+	@on desktop,tablet
+		@forEach [menu.items-*] as item, next as nextItem
+			${item}:
+				left-of ${nextItem} 0 px
+				aligned horizontally all ${nextItem}
+				height 63 px
+
+	@on mobile
+		@for [1] as index
+			menu.items-${index}:
+				above menu.items-${index+2} 0px
+				left-of menu.items-${index+1} 0 px
+				aligned vertically all menu.items-${index+2}
+	

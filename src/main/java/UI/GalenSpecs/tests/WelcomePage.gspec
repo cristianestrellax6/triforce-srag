@@ -1,0 +1,52 @@
+@import ../utils/locators/WelcomeLocators.gspec
+@import ../utils/common/UpperPage.gspec	
+@import ../utils/common/FooterPage.gspec	
+
+
+= Welcome Page =
+	welcomePage:
+		@on desktop
+			height 	346 	px
+			width  	860 	px
+
+		@on tablet
+			height 	446 px
+			width  	760 px
+
+		@on mobile
+			height 	420 px
+			width  	460 px
+
+		@on desktop,tablet,mobile
+			below menu 20 px
+	
+	welcomePage.text:
+		text is "Welcome to our test page!"
+	
+	welcomePage.buttonLogin:
+		text is "Login"
+
+		@on desktop,tablet
+			width 	79 px
+			height 	45 	px
+
+			aligned vertically left welcomePage.text
+
+		@on desktop
+			below welcomePage.text 101 px
+
+		@on tablet
+			below welcomePage.text 132 px
+			
+
+		@on mobile
+			width 	400 px
+			height 	45 	px
+
+			below welcomePage.text 202 px
+			aligned vertically all welcomePage.text
+
+	
+
+
+
